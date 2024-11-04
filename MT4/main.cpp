@@ -29,7 +29,7 @@ Vector3 Normalize(const Vector3& v) {
 Matrix4x4 MakeRotateAxisAngle(const Vector3& axis, float angle) {
     float cos = std::cos(angle);
     float sin = std::sin(angle);
-    float oneMinusCos = 1.0f - cos;
+    float oneMinusCos = (1.0f - cos);
 
     Vector3 normalizedAxis = Normalize(axis);
 
