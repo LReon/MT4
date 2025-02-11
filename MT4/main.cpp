@@ -1,4 +1,3 @@
-
 #include <KamataEngine.h>
 #include <Novice.h>
 #include <DirectXMath.h>
@@ -17,7 +16,7 @@ void QuaternionScreenPrintf(int x, int y,
 		q.x, q.y, q.z, q.w);
 }
 
-//せき
+//積
 Quaternion Multiply(const Quaternion& lhs, const Quaternion& rhs) {
 	DirectX::XMVECTOR q1 = DirectX::XMLoadFloat4(&lhs);
 	DirectX::XMVECTOR q2 = DirectX::XMLoadFloat4(&rhs);
@@ -27,7 +26,7 @@ Quaternion Multiply(const Quaternion& lhs, const Quaternion& rhs) {
 	return out;
 }
 
-// クォータニオンを生成する関数
+// クオニオンを生成する関数
 Quaternion MakeRotateAxisAngleQuaternion(const Vector3& axis,
 	float angle) {
 	float sinHalfAngle = sin(angle / 2.0f);
@@ -46,7 +45,7 @@ Quaternion Slerp(const Quaternion& q0Input,
 	Quaternion q0 = q0Input;
 	Quaternion q1 = q1Input;
 
-	// クォータニオンの内積を計算
+	// クオニオンの内積を計算
 	float dot = q0.x * q1.x + q0.y * q1.y + q0.z * q1.z + q0.w * q1.w;
 
 	// 内積が負の場合、符号を反転して最短経路を選択
