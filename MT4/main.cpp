@@ -4,7 +4,7 @@
 #include <DirectXMath.h>
 #include <cmath>
 
-const char kWindowTitle[] = "01_05";
+const char kWindowTitle[] = "MT4_01_05";
 
 using Vector3 = DirectX::XMFLOAT3;
 using Quaternion = DirectX::XMFLOAT4;
